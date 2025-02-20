@@ -36,7 +36,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mountain!"
+                android:text="Snow Mountain!"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
