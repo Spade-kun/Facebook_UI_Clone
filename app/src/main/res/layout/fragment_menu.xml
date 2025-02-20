@@ -1,27 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="16dp"
+    android:background="#F0F2F5">
 
+    <!-- Menu Title -->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Menu"
         android:textStyle="bold"
-        android:textSize="18sp"
-        android:paddingBottom="8dp"/>
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
 
-    <Button
+    <!-- Profile Button -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_profile"
-        android:layout_width="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to Profile"/>
+        android:text="Profile"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/sample_profile"
+        android:drawablePadding="8dp"
+        android:paddingVertical="12dp"/>
 
-    <Button
+    <!-- Settings Button -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_settings"
-        android:layout_width="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Settings"/>
+        android:text="Settings"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_settings"
+        android:drawablePadding="8dp"
+        android:paddingVertical="12dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Logout Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_logout"
+        android:drawablePadding="8dp"
+        android:paddingVertical="12dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#D32F2F"
+        app:strokeColor="#D32F2F"
+        app:rippleColor="#FFCDD2"/>
+
 </LinearLayout>
