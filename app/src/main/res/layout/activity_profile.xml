@@ -1,37 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="#F0F2F5">
 
     <!-- Back Button -->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_back"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Menu" />
+        android:text="Back to Menu"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_back"
+        android:drawablePadding="8dp"
+        android:layout_gravity="start"/>
 
-    <!-- Profile Information -->
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sample_profile"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_bg"
+        android:scaleType="centerCrop"/>
+
+    <!-- Profile Name -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Profile"
-        android:textSize="22sp"
+        android:text="Noel Raterta"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:paddingTop="16dp"/>
+        android:textColor="#000000"
+        android:paddingTop="12dp"/>
 
+    <!-- Profile Email -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name: Noel Raterta"
+        android:text="noel@gmail.com"
         android:textSize="16sp"
-        android:paddingTop="8dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email: noel@gmail.com"
-        android:textSize="16sp"
+        android:textColor="#555555"
         android:paddingTop="4dp"/>
+
+    <!-- Edit Profile Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_edit"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Logout Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_logout"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#D32F2F"
+        app:strokeColor="#D32F2F"
+        app:rippleColor="#FFCDD2"/>
+
 </LinearLayout>
