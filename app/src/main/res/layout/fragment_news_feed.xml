@@ -10,386 +10,459 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <!-- Post 1 -->
-        <LinearLayout
+        <!-- MyDay (Stories) Section -->
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="vertical"
-            android:radius="10dp"
-            android:elevation="4dp">
+            android:paddingBottom="10dp"
+            android:overScrollMode="never"
+            android:scrollbars="none">
 
-            <!-- Profile & Name Section -->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/sample_profile"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/circle_bg"/>
-
+                <!-- Example Story Item -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
                     android:orientation="vertical"
-                    android:paddingStart="10dp">
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/sample_post"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/sample_profile"
+                        android:background="@drawable/circle_bg"
+                        android:scaleType="centerCrop"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Balon Doy"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2h •"
-                            android:textSize="12sp"
-                            android:textColor="#777777"/>
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:src="@drawable/sample_post"
-                            android:paddingStart="4dp"/>
-                    </LinearLayout>
+                        android:text="Your Story"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:paddingTop="4dp"
+                        android:gravity="center"/>
                 </LinearLayout>
-            </LinearLayout>
 
-            <!-- Post Content -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snow Mountain!"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/sample_post"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/circle_bg"/>
-
-            <!-- Like, Comment, Share Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="8dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_like"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Like"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
-
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="1dp"/>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_comment"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Comment"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
-
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="1dp"/>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_share"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Share"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
-            </LinearLayout>
-        </LinearLayout>
-
-<!--        Post 2-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="vertical"
-            android:radius="10dp"
-            android:elevation="4dp">
-
-            <!-- Profile & Name Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/sample_profile"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/circle_bg"/>
-
+                <!-- Another Story Item -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
                     android:orientation="vertical"
-                    android:paddingStart="10dp">
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/sample_post"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/sample_profile"
+                        android:background="@drawable/circle_bg"
+                        android:scaleType="centerCrop"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Jimmies Boi"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2h •"
-                            android:textSize="12sp"
-                            android:textColor="#777777"/>
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:src="@drawable/sample_post"
-                            android:paddingStart="4dp"/>
-                    </LinearLayout>
+                        android:text="John Doe"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:paddingTop="4dp"
+                        android:gravity="center"/>
                 </LinearLayout>
+
             </LinearLayout>
+        </HorizontalScrollView>
 
-            <!-- Post Content -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="!"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/sample_post2"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/circle_bg"/>
-
-            <!-- Like, Comment, Share Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="8dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_like"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Like"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
-
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="1dp"/>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_comment"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Comment"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
-
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="1dp"/>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_share"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Share"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
-            </LinearLayout>
-        </LinearLayout>
-
-<!--        Post 3-->
+        <!-- News Feed Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="vertical"
-            android:radius="10dp"
-            android:elevation="4dp">
+            android:orientation="vertical">
 
-            <!-- Profile & Name Section -->
+            <!-- Post 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:elevation="4dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/sample_profile"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/circle_bg"/>
-
+                <!-- Profile & Name Section -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingStart="10dp">
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="BBG Concert"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sample_profile"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_bg"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:orientation="vertical"
+                        android:paddingStart="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2h •"
-                            android:textSize="12sp"
-                            android:textColor="#777777"/>
+                            android:text="Balon Doy"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
 
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:src="@drawable/sample_post"
-                            android:paddingStart="4dp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2h •"
+                                android:textSize="12sp"
+                                android:textColor="#777777"/>
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/circle_bg"
+                                android:paddingStart="4dp"/>
+                        </LinearLayout>
                     </LinearLayout>
+                </LinearLayout>
+
+                <!-- Post Content -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Snow Mountain!"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/sample_post"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="8dp"/>
+
+                <!-- Like, Comment, Share Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_like"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_comment"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_share"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Post Content -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="EHEHEHE!"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/sample_post3"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/circle_bg"/>
-
-            <!-- Like, Comment, Share Section -->
+<!--            Post 2-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="8dp">
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:elevation="4dp">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_like"/>
+                <!-- Profile & Name Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sample_profile"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_bg"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jimmies"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2h •"
+                                android:textSize="12sp"
+                                android:textColor="#777777"/>
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/circle_bg"
+                                android:paddingStart="4dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Post Content -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Like"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
-
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="1dp"/>
+                    android:text="WOWOWOW!"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_comment"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Comment"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/sample_post2"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="8dp"/>
 
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="1dp"/>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_share"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- Like, Comment, Share Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Share"
-                    android:textSize="12sp"
-                    android:layout_marginStart="5dp"/>
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_like"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_comment"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_share"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
+<!--            Post 3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:elevation="4dp">
+
+                <!-- Profile & Name Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sample_profile"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_bg"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BBG Concert"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2h •"
+                                android:textSize="12sp"
+                                android:textColor="#777777"/>
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/circle_bg"
+                                android:paddingStart="4dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Post Content -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WEWO!"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/sample_post3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="8dp"/>
+
+                <!-- Like, Comment, Share Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_like"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_comment"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_share"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
