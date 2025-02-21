@@ -1,62 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:background="#F0F2F5">
 
-    <!-- Menu Title -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Menu"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:gravity="center"
-        android:paddingBottom="12dp"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <!-- Profile Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_profile"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textSize="16sp"
-        android:drawableStart="@drawable/sample_profile"
-        android:drawablePadding="8dp"
-        android:paddingVertical="12dp"/>
+        <!-- Search Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
 
-    <!-- Settings Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_settings"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        android:textSize="16sp"
-        android:drawableStart="@drawable/ic_settings"
-        android:drawablePadding="8dp"
-        android:paddingVertical="12dp"
-        android:layout_marginTop="8dp"/>
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:queryHint="Search menu"
+                app:iconifiedByDefault="false" />
+        </com.google.android.material.card.MaterialCardView>
 
-    <!-- Logout Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_logout"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textSize="16sp"
-        android:drawableStart="@drawable/ic_logout"
-        android:drawablePadding="8dp"
-        android:paddingVertical="12dp"
-        android:layout_marginTop="8dp"
-        android:textColor="#D32F2F"
-        app:strokeColor="#D32F2F"
-        app:rippleColor="#FFCDD2"/>
+        <!-- Profile Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <!-- Profile Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_profile"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="Your Profile"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:icon="@drawable/sample_profile"
+                    app:iconSize="40dp"
+                    app:iconTint="@null" />
+
+                <!-- Settings Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_settings"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="Settings &amp; privacy"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:icon="@drawable/ic_settings"
+                    app:iconSize="24dp"
+                    app:iconTint="#65676B" />
+
+                <!-- Help Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_help"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="Help &amp; support"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:icon="@drawable/ic_help"
+                    app:iconSize="24dp"
+                    app:iconTint="#65676B" />
+
+                <!-- Logout Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_logout"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="Log Out"
+                    android:textColor="#1877F2"
+                    android:textSize="16sp"
+                    app:icon="@drawable/ic_logout"
+                    app:iconSize="24dp"
+                    app:iconTint="#1877F2" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.facebookuiclone.adapters.NotificationAdapter;
-import com.example.facebookuiclone.model.NotificationModel;
+import com.example.facebookuiclone.extensions.NotificationExtension;
+import com.example.facebookuiclone.models.NotificationModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.List;
 public class NotificationFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private NotificationAdapter adapter;
+    private NotificationExtension adapter;
     private List<NotificationModel> notificationList;
 
     @Nullable
@@ -35,7 +35,7 @@ public class NotificationFragment extends Fragment {
         notificationList.add(new NotificationModel("Alice commented on your post.", "10 mins ago", R.drawable.sample_profile));
         notificationList.add(new NotificationModel("Mark sent you a friend request.", "15 mins ago", R.drawable.sample_profile));
 
-        adapter = new NotificationAdapter(notificationList);
+        adapter = new NotificationExtension(notificationList);
         recyclerView.setAdapter(adapter);
 
         return view;

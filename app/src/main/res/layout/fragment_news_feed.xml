@@ -14,70 +14,295 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
+            android:paddingVertical="8dp"
             android:overScrollMode="never"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp">
 
-                <!-- Example Story Item -->
+                <!-- Create Story Item -->
                 <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="120dp"
+                    android:layout_width="110dp"
+                    android:layout_height="190dp"
                     android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/sample_post"
-                    android:elevation="4dp">
+                    android:background="#FFFFFF"
+                    android:elevation="2dp">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="8dp"
-                        android:src="@drawable/sample_profile"
-                        android:background="@drawable/circle_bg"
-                        android:scaleType="centerCrop"/>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sample_profile"
+                            android:scaleType="centerCrop"/>
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="-18dp"
+                            android:src="@drawable/ic_add"
+                            android:backgroundTint="#1877F2"/>
+                    </FrameLayout>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Your Story"
+                        android:text="Create story"
                         android:textSize="12sp"
-                        android:textColor="#FFFFFF"
-                        android:paddingTop="4dp"
-                        android:gravity="center"/>
+                        android:textAlignment="center"
+                        android:paddingTop="24dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="#000000"/>
                 </LinearLayout>
 
-                <!-- Another Story Item -->
+                <!-- Story Item -->
                 <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="120dp"
+                    android:layout_width="110dp"
+                    android:layout_height="190dp"
                     android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/sample_post"
-                    android:elevation="4dp">
+                    android:layout_marginEnd="8dp">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="8dp"
-                        android:src="@drawable/sample_profile"
-                        android:background="@drawable/circle_bg"
-                        android:scaleType="centerCrop"/>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="John Doe"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF"
-                        android:paddingTop="4dp"
-                        android:gravity="center"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sample_post"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="8dp"
+                            android:padding="2dp"
+                            android:src="@drawable/sample_profile"
+                            android:background="@drawable/story_border"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_gravity="bottom"
+                            android:padding="8dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2"/>
+                    </FrameLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sample_post"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="8dp"
+                            android:padding="2dp"
+                            android:src="@drawable/sample_profile"
+                            android:background="@drawable/story_border"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_gravity="bottom"
+                            android:padding="8dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sample_post"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="8dp"
+                            android:padding="2dp"
+                            android:src="@drawable/sample_profile"
+                            android:background="@drawable/story_border"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_gravity="bottom"
+                            android:padding="8dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sample_post"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="8dp"
+                            android:padding="2dp"
+                            android:src="@drawable/sample_profile"
+                            android:background="@drawable/story_border"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_gravity="bottom"
+                            android:padding="8dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sample_post"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="8dp"
+                            android:padding="2dp"
+                            android:src="@drawable/sample_profile"
+                            android:background="@drawable/story_border"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_gravity="bottom"
+                            android:padding="8dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sample_post"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="8dp"
+                            android:padding="2dp"
+                            android:src="@drawable/sample_profile"
+                            android:background="@drawable/story_border"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_gravity="bottom"
+                            android:padding="8dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Add more story items as needed -->
 
             </LinearLayout>
         </HorizontalScrollView>
@@ -151,14 +376,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Snow Mountain!"
+                    android:text="EPIC!"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"/>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/sample_post"
+                    android:src="@drawable/post1"
                     android:scaleType="centerCrop"
                     android:layout_marginTop="8dp"/>
 
@@ -276,14 +501,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="WOWOWOW!"
+                    android:text="Ow NOOOOO!"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"/>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/sample_post2"
+                    android:src="@drawable/post2"
                     android:scaleType="centerCrop"
                     android:layout_marginTop="8dp"/>
 
@@ -408,7 +633,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/sample_post3"
+                    android:src="@drawable/post3"
                     android:scaleType="centerCrop"
                     android:layout_marginTop="8dp"/>
 

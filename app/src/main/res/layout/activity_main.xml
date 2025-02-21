@@ -4,7 +4,62 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Top Navigation Bar -->
+    <!-- Top Bar with Facebook Logo, Search, and Message -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="facebook"
+            android:textColor="#1877F2"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F0F2F5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Search Facebook"
+                    android:textColor="#65676B"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/nav_messenger"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_messenger"
+            android:contentDescription="Messenger"/>
+    </LinearLayout>
+
+    <!-- Main Navigation Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +79,7 @@
         <ImageView
             android:id="@+id/nav_video"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
             android:src="@drawable/ic_video"
             android:contentDescription="Video"/>
@@ -40,8 +95,8 @@
         <ImageView
             android:id="@+id/nav_gaming"
             android:layout_width="0dp"
+            android:layout_height="28dp"
             android:layout_marginTop="5dp"
-            android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/ic_gaming"
             android:contentDescription="Gaming"/>
@@ -62,7 +117,6 @@
             android:src="@drawable/ic_menu"
             android:contentDescription="Menu"/>
     </LinearLayout>
-
 
     <!-- Fragment Container -->
     <FrameLayout

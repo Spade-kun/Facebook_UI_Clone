@@ -1,4 +1,4 @@
-package com.example.facebookuiclone.model;
+package com.example.facebookuiclone.models;
 
 public class NotificationModel {
     private String notificationText;

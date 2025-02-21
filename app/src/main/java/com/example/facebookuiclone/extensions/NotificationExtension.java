@@ -1,4 +1,4 @@
-package com.example.facebookuiclone.adapters;
+package com.example.facebookuiclone.extensions;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,15 +8,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.facebookuiclone.R;
-import com.example.facebookuiclone.model.NotificationModel;
+import com.example.facebookuiclone.models.NotificationModel;
 
 import java.util.List;
 
-public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.ViewHolder> {
+public class NotificationExtension extends RecyclerView.Adapter<NotificationExtension.ViewHolder> {
 
     private List<NotificationModel> notificationList;
 
-    public NotificationAdapter(List<NotificationModel> notificationList) {
+    public NotificationExtension(List<NotificationModel> notificationList) {
         this.notificationList = notificationList;
     }
 
